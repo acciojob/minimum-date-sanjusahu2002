@@ -1,5 +1,24 @@
 function minDate(dates) {
   //write you code here
+	let arr2=[];
+    dates.forEach((item)=>{
+        arr2.push(new Date(item));
+    });
+    // console.log("arr2",arr2)
+    let minDate = new Date(Math.min.apply(null,arr2));
+    let index;
+    arr2.forEach((item,i)=>{
+        if(minDate.toString() == item){
+            index = i;
+            
+        }
+    });
+    // console.log(index);
+    return dates[index];
+	
+
+
+	
 }
 
 // Do not change the code
